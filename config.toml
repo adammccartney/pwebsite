@@ -2,7 +2,7 @@ baseurl = "https://admccartney.mur.at"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
 title = "Adam McCartney"
-theme = "beautifulhugo-adam"
+theme = "adbhugo"
 metaDataFormat = "yaml"
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
@@ -15,7 +15,7 @@ pygmentsCodefencesGuessSyntax = true
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
-  subtitle = "composer, musician"
+  subtitle = "music composition and software development"
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
