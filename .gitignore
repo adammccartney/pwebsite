@@ -1,0 +1,17 @@
+# theme (might add as submodule later
+themes/beautifulhugo
+
+# generated site files 
+/public
+/static/images
+/static/scores
+/static/sounds
+/static/img
+
+
+# binary files 
+*.wav
+*.mp3
+*.png
+*.jpg
+*.jpeg
