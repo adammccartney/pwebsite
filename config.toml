@@ -15,7 +15,7 @@ pygmentsCodefencesGuessSyntax = true
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
-  subtitle = "music composition and software development"
+  subtitle = "music composition | software development"
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
@@ -61,11 +61,11 @@ pygmentsCodefencesGuessSyntax = true
   #bitbucket = "username"
   #twitter = "username"
   #reddit = "username"
-  #linkedin = "username"
+  linkedin = "admccartney"
   #xing = "username"
   #stackoverflow = "users/XXXXXXX/username"
   #snapchat = "username"
-  #instagram = "adam_c_mccartney"
+  instagram = "adam_c_mccartney"
   youtube = "user/ad199" # or channel/channelname
   soundcloud = "gophernot"
   #spotify = "username"
@@ -88,14 +88,9 @@ pygmentsCodefencesGuessSyntax = true
     weight = 3
 
 [[menu.main]]
-    name = "Scores"
-    url = "scores/"
+    name = "Software"
+    url = "software/"
     weight = 4
-
-[[menu.main]]
-    name = "Concerts"
-    url = "concerts/"
-    weight = 5
 
 [[menu.main]]
     name = "Tags"
