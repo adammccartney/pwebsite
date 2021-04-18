@@ -4,7 +4,7 @@
 - id: shortdateFormat
   translation: "2 Jan, 2006 15:04:05"
 - id: postedOnDate
-  translation: "Postet {{ . }}"
+  translation: "Postet {{ .Count }}"
 - id: lastModified
   translation: "(Sist endret {{ . }})"
 - id: translationsLabel
