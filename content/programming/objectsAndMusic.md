@@ -1,7 +1,7 @@
 ---
 title: "ObjectsAndMusic"
 date: 2021-04-26T14:53:35+02:00
-draft: true
+draft: false
 ---
 
 There is a funny story from the composer Morton Feldman. The full story can be 

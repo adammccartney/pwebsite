@@ -29,6 +29,7 @@ metaDataFormat = "yaml"
   delayDisqus = true
   showRelatedPosts = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+  mainSections = ["programming", "music"]
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
@@ -64,6 +65,7 @@ metaDataFormat = "yaml"
    instrument = "instruments"
    video = "videos"
    recording = "recordings"
+   series = "series"
 
 [Author]
   name = "Adam McCartney"

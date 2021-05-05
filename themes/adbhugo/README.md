@@ -26,8 +26,8 @@ This theme has support for either Hugo's lightning fast Chroma, or both server s
 To enable Chroma, add the following to your site parameters:
 
 ```
-pygmentsCodeFences = true
-pygmentsUseClasses = true
+pygmentsCodeFences = false
+pygmentsUseClasses = false
 ```
 
 Then, you can generate a different style by running:
@@ -42,7 +42,7 @@ To use this feature install Pygments (`pip install Pygments`) and add the follow
 
 ```
 pygmentsStyle = "trac"
-pygmentsUseClassic = true
+pygmentsUseClassic = false
 ```
 
 Pygments is mostly compatable with the newer Chroma. It is slower but has some additional theme options. I recommend Chroma over Pygments. Pygments will use `syntax.css` for highlighting, unless you also set the config `pygmentsUseClasses = false` which will generate the style code directly in the HTML file. 
@@ -50,7 +50,7 @@ Pygments is mostly compatable with the newer Chroma. It is slower but has some a
 #### Highlight.js - Client side syntax highlighting
 ```
 [Params]
-    useHLJS = true
+    useHLJS = false
 ```
 
 Client side highlighting does not require pygments to be installed. This will use `highlight.min.css` instead of `syntax.css` for highlighting (effectively disabling Chroma). Highlight.js has a wider range of support for languages and themes, and an alternative highlighting engine.
@@ -89,7 +89,7 @@ comments:
   path: "data/comments/{options.slug}"
   filename          : "comment-{@timestamp}"
   format            : "yaml"
-  moderation        : true
+  moderation        : false
   requiredFields    : ['name', 'email', 'comment']
   transforms:
     email           : md5
@@ -99,7 +99,7 @@ comments:
       options:
         format      : "iso8601"
   reCaptcha:
-    enabled: true
+    enabled: false
     siteKey: "6LeGeTgUAAAAAAqVrfTwox1kJQFdWl-mLzKasV0v"
     secret: "hsGjWtWHR4HK4pT7cUsWTArJdZDxxE2pkdg/ArwCguqYQrhuubjj3RS9C5qa8xu4cx/Y9EwHwAMEeXPCZbLR9eW1K9LshissvNcYFfC/b8KKb4deH4V1+oqJEk/JcoK6jp6Rr2nZV4rjDP9M7nunC3WR5UGwMIYb8kKhur9pAic="
 ```
@@ -115,7 +115,7 @@ To add Google Analytics, simply sign up to [Google Analytics](https://www.google
 If the source of your site is in a Git repo, the SHA corresponding to the commit the site is built from can be shown on the footer. To do so, two site parameters `commit` has to be defined in the config file `config.toml`:
 
 ```
-enableGitInfo = true
+enableGitInfo = false
 [Params]
   commit = "https://github.com/<username>/<siterepo>/tree/"
 ```

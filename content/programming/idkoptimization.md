@@ -1,8 +1,10 @@
 ---
 title: "Not knowing...python code optimization"
 date: 2021-05-04T14:53:24+02:00
-draft: true
+draft: false
 
+tags: ["Python", "Code style"]
+series: ["not knowing"]
 ---
 
 
