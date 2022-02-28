@@ -5,6 +5,7 @@ draft: false
 
 tags: ["Python", "Code style"]
 series: ["not knowing"]
+
 ---
 
 
