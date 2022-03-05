@@ -1,37 +1,35 @@
 ---
-title: "The orchestra and the interpreter"
+title: "marana 22"
 date: 2022-02-28T15:53:37+01:00
 draft: false
 
 ---
 
-Part of my work as a composer over the past ten years or so has been centered
-around the process of creating notated scores and parts for musicians to play.
-Currently I'm working on a short piece for orchestra that will be performed in
-Dublin, Ireland by the National Symphony Orchestra later this year. I'm going
-to document at least some of the work as I go. I've definitely always been
-interested in a certain amount of DIY ethos in terms of how to approach music.
-My dad is an electronic engineer, so the idea of inventing solutions to
-problems was emparted early. Limerick, the town where I grew up, had a tiny 
-punk scene and a healthy community of skaters who were all about doing things
-yourself (organizing gigs or building things to skate). When I went to college
-in Cork, I was lucky to hit it at a good time, when there were a couple of
-really interesting grad students building their own electronic music systems
-and thinking generally about interesting ways to use technology to approach the
-creative act of making music. After Cork, I spent a couple of years as a grad
-student in Graz, Austria. I would say the college there very much had a fairly
-typical conservetoire approach to music, laying plenty of emphasis on the
-importance of tradition and history. At the same time, the professor that I
-studied with had the same sort of punk ethos that I was used to - if you wanted
-to learn about writing music and living as a composer, the best thing to do was
-simply to write the scores, organize the concerts and see what happens. Around
-the same time in Graz, I got to know some of the people behind mur.at - an
-organization focused on the free software movement and networked art. 
+## origins
 
-Around 2016, I decided to take a look at gnu lilypond as a tool for typesetting
-scores. I've blogged a bit about elsewhere on the site. Since then I've tried
-out a number of different approaches that encorporate lilypond as a way to
-typeset music. 
+marana is a word in the Irish language that can be translated as meditation. Or
+more rightly put, it's a word that I found when looking for a translation of
+the word meditation. As an Irishman myself, I can confess to probably being too
+mad to really meditate. It's probably closer to some sort of rumination that feels 
+more familiar. Anyway, marana is a word that sort of emerged while speaking with 
+two Irish speakers who live in the Waterford area. I settled on it because it
+has a nice ring to it. At the time (in 2020) I was looking for a title for
+a short piece of orchestral music for a project with the [CMC](https://www.cmc.ie/)
+and the [NSO](https://www.nso.ie/). marana seemed like a good name for a
+short piece. I think it's not unheard of to sometimes call a short work for
+orchestra meditation. I wonder if there are any pieces by Irish composer's
+called ruminations for orchestra?
+
+In the meantime of course the covid pandemic happened and the project was
+postponed and postponed again. In the meantime I was working on the soundtrack
+for [Becoming Arctic](https://filmfreeway.com/BecomingArctic) and 
+[rill (erosion)](https://github.com/adammccartney/rill/), a piece that formed
+part of the [rotting sounds](https://rottingsounds.org/) artistic research
+project. Although I've been using [lilypond](https://lilypond.org/) to notate
+music for some time, and had started using python scripts as a way to generate
+some of the lilypond music syntax more quickly, for these two pieces (rill and
+becoming arctic) I started to use the [abjad](https://abjad.github.io) API as a
+way to interface with lilypond.
 
 ## The destination and the journey
 + thought it would be possible to start modelling really cool algorithmic stuff
@@ -55,6 +53,18 @@ typeset music.
 
 
 ## Designing a custom approach
-+ staying close to a legible format the whole way through
+Bjarne Stroustrup makes a good point in his
+[book](https://www.stroustrup.com/programming.html) when talking about
+interfacing with third party code. He remarks that ideally, we would like to
+keep any code we write around for as long as possible, and so we want to keep
+dependencies to a minimum. I've tried to keep this in mind when working on
+marana. abjad is a really useful library that is carefully and lovingly
+maintained. At the same time, it is a big complex API that I didn't write and
+don't fully understand, so I want to keep my reliance on it as a sort of a
+swiss army knife solution to a minimum. What I do want is to essentially cherry
+pick a couple of functions and classes. 
+
+## Pitch selectors
++ 
 
 
