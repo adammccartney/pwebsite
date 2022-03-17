@@ -1,10 +1,3 @@
----
-title: "c for confusing"
-date: 2022-03-14T21:29:11+01:00
-draft: true
-
----
-
 # Implementing a simple shell 
 
 ## background

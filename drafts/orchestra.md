@@ -1,10 +1,3 @@
----
-title: "marana 22"
-date: 2022-02-28T15:53:37+01:00
-draft: false
-
----
-
 ## origins
 
 marana is a word in the Irish language that can be translated as meditation. Or
