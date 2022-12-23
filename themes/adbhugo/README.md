@@ -2,6 +2,10 @@
 
 ![Beautiful Hugo Theme Screenshot](https://github.com/halogenica/beautifulhugo/blob/master/images/screenshot.png)
 
+## Live demo
+
+See https://hugo-theme-beautifulhugo.netlify.app/
+
 ## Installation
 
     $ mkdir themes
@@ -26,8 +30,8 @@ This theme has support for either Hugo's lightning fast Chroma, or both server s
 To enable Chroma, add the following to your site parameters:
 
 ```
-pygmentsCodeFences = false
-pygmentsUseClasses = false
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 ```
 
 Then, you can generate a different style by running:
@@ -42,7 +46,7 @@ To use this feature install Pygments (`pip install Pygments`) and add the follow
 
 ```
 pygmentsStyle = "trac"
-pygmentsUseClassic = false
+pygmentsUseClassic = true
 ```
 
 Pygments is mostly compatable with the newer Chroma. It is slower but has some additional theme options. I recommend Chroma over Pygments. Pygments will use `syntax.css` for highlighting, unless you also set the config `pygmentsUseClasses = false` which will generate the style code directly in the HTML file. 
@@ -50,7 +54,7 @@ Pygments is mostly compatable with the newer Chroma. It is slower but has some a
 #### Highlight.js - Client side syntax highlighting
 ```
 [Params]
-    useHLJS = false
+    useHLJS = true
 ```
 
 Client side highlighting does not require pygments to be installed. This will use `highlight.min.css` instead of `syntax.css` for highlighting (effectively disabling Chroma). Highlight.js has a wider range of support for languages and themes, and an alternative highlighting engine.
@@ -89,7 +93,7 @@ comments:
   path: "data/comments/{options.slug}"
   filename          : "comment-{@timestamp}"
   format            : "yaml"
-  moderation        : false
+  moderation        : true
   requiredFields    : ['name', 'email', 'comment']
   transforms:
     email           : md5
@@ -99,7 +103,7 @@ comments:
       options:
         format      : "iso8601"
   reCaptcha:
-    enabled: false
+    enabled: true
     siteKey: "6LeGeTgUAAAAAAqVrfTwox1kJQFdWl-mLzKasV0v"
     secret: "hsGjWtWHR4HK4pT7cUsWTArJdZDxxE2pkdg/ArwCguqYQrhuubjj3RS9C5qa8xu4cx/Y9EwHwAMEeXPCZbLR9eW1K9LshissvNcYFfC/b8KKb4deH4V1+oqJEk/JcoK6jp6Rr2nZV4rjDP9M7nunC3WR5UGwMIYb8kKhur9pAic="
 ```
@@ -110,12 +114,14 @@ If you *don't* have the section `[Params.staticman]` in `config.toml`, you *won'
 
 To add Google Analytics, simply sign up to [Google Analytics](https://www.google.com/analytics/) to obtain your Google Tracking ID, and add this tracking ID to the `googleAnalytics` parameter in `config.toml`.
 
+Note that the Google Analytics tracking code will only be inserted into the page when the site isn't served on Hugo's built-in server, to prevent tracking from local testing environments.
+
 ### Commit SHA on the footer
 
 If the source of your site is in a Git repo, the SHA corresponding to the commit the site is built from can be shown on the footer. To do so, two site parameters `commit` has to be defined in the config file `config.toml`:
 
 ```
-enableGitInfo = false
+enableGitInfo = true
 [Params]
   commit = "https://github.com/<username>/<siterepo>/tree/"
 ```
@@ -148,7 +154,18 @@ content/      content/      content/
     └── post/     └── post/     └── post/
 
 ```
- 
+
+### Self Hosted assets for GDPR / EU-DSGVO compliance
+
+With default settings, visiting to a website using Beautifulhugo connects also to remote services like google fonts or jsdelivr to embed fonts, js and other assets.
+
+To avoid this, set the following param in config.toml:
+
+```
+[Params]
+  selfHosted = true
+```
+
 ### Extra shortcodes
 
 There are two extra shortcodes provided (along with the customized figure shortcode):
@@ -172,7 +189,7 @@ This adds a two column side-by-side environment (will turn into 1 col for narrow
 This is column 1.
 {{< column >}}
 This is column 2.
-{{< endcolumn >}}
+{{< endcolumns >}}
 ```
 
 ## About

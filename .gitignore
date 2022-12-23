@@ -1,6 +1,3 @@
-# theme (might add as submodule later
-themes/beautifulhugo
-
 # generated site files 
 /public
 /static/images
