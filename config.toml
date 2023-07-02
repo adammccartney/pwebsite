@@ -1,13 +1,13 @@
 baseurl = "https://admccartney.mur.at"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
-title = "Adam McCartney"
+title = "ad mu"
 theme = "adbhugo"
 metaDataFormat = "yaml"
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
-  subtitle = "music | programming"
+  subtitle = "Personal website of Adam McCartney"
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"

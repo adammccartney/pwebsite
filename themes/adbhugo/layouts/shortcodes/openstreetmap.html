@@ -1,0 +1,37 @@
+{{ $mapName := .Get "mapName" }}
+
+{{ $mapWidth := .Get "mapWidth" | default "70%" }}
+{{ $mapHeight := .Get "mapEight" | default "600px" }}
+
+{{ $scaleControl := .Get "scaleControl" | default "true"  }}
+{{ $miniMap := .Get "miniMap" | default "true" }}
+{{ $scrollWheelZoom := .Get "scrollWheelZoom" | default "true" }}
+{{ $zoomControl := .Get "zoomControl" | default "true" }}
+{{ $allowEdit := .Get "allowEdit" | default "false" }}
+{{ $moreControl := .Get "moreControl" | default "true" }}
+{{ $searchControl := .Get "searchControl" | default "true" }}
+{{ $tilelayersControl := .Get "tilelayersControl" | default "null" }}
+{{ $embedControl := .Get "embedControl" | default "false" }}
+{{ $datalayersControl := .Get "datalayersControl" | default "null" }}
+{{ $onLoadPanel := .Get "onLoadPanel" | default "none" }}
+{{ $captionBar := .Get "captionBar" | default "true" }}
+{{ $fullscreenControl := .Get "fullscreenControl" | default "null" }}
+
+{{ $scale := .Get "scale" | default 7 }}
+{{ $coordX := .Get "coordX" | default 46.0275 }}
+{{ $coordY := .Get "coordY" | default 7.483 }}
+{{ $bboxX0 := .Get "bboxX0" | default 16.360605955123905 }}
+{{ $bboxY0 := .Get "bboxY0" | default 48.2584360476739 }}
+{{ $bboxX1 := .Get "bboxX1" | default 16.364146471023563}}
+{{ $bboxY1 := .Get "bboxY1" | default 48.26000211692542 }}
+
+<div class="block">
+    <h2>Source OpenStreetMap</h2>
+    <div class="google-map">
+
+        <iframe width="{{ $mapWidth }}" height="{{ $mapHeight }}"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox={{ $bboxX0 }}%2C{{ $bboxY0 }}%2C{{ $bboxX1 }}%2C{{ $bboxY1 }}&amp;layer=mapnik" style="border: 1px solid black"></iframe>
+        <br/><small><a href="https://www.openstreetmap.org/#map={{ $coordX }}/{{ $coordY }}">View Larger Map</a></small>
+    </div>
+</div>
