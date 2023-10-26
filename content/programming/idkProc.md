@@ -1,5 +1,5 @@
 ---
-title: "not knowing the /proc file system"
+title: "not knowing the /proc filesystem"
 date: 2023-10-22T15:12:10+02:00
 draft: false
 
@@ -8,6 +8,10 @@ series: ["not knowing"]
 ---
 
 # Overview
+
+Edit: this post was discussed on [hacker news](https://news.ycombinator.com/item?id=38009372)
+Some of the comments contained valuable reviews of the C code listed
+below. I've appended some edits after the original listing.
 
 I've been working quite with files and file systems on Linux recently.
 Mostly from the vantage point of either a shell or a python script. I
@@ -323,6 +327,79 @@ main (int argc, char* argv[])
     return 0;
 }
 ```
+
+### Edit: safely reading a /proc/$PID/status "file"
+
+So, one fairly serious shortcoming of the code listings above is
+that they do not correctly handle the case where the `/proc/$PID`
+process disappears between the time the call to `readdir` and
+the call to `fopen`. I've created another post called [/proc los](/programming/idkprocii)
+that documents some of the steps taken to build understanding of how to
+fix the errors in the original code. As an additional measure in the following
+excerpt, `access` is used to check whether the pseudo file is still available
+for reading. So it doesn't even attempt the call to `fopen` if it's not.
+
+
+```c
+    dirp = opendir(PROC);
+    if (dirp) {
+        errno = 0;
+        while ((dp = readdir(dirp)) != NULL) {
+            fname = make_filename(dp->d_name);
+            if (access(fname, F_OK) == 0) {
+                fp = fopen(fname, "r");
+                if (fp == NULL) { /* Entered a bad state */
+                    fprintf(stderr, "Error: fopen attempted read on %s, returned %d", fname, errno);
+                } else {
+                    fd = fileno(fp);
+                    if (fstat(fd, &sb) == -1) {
+                        return -1; /* just cheese it! */
+                    }
+                    if (uid == sb.st_uid) {
+                        lone = fgetLine(MAXLINE, fp);
+                        printf("%-24s pid:%-30.30s\n", lone, dp->d_name);
+                    }
+                }
+            } else {
+                fprintf(stderr, "Error: %s failed before fopen\n", dp->d_name);
+            }
+        }
+        closedir(dirp);
+    }
+```
+
+The updated listing can be found on [github](https://github.com/adammccartney/cscratch/commit/343898775b7927cb33898d96129c32343e121e9c)
+
+
+### Edit: fix s_isdigit
+
+The original routine `s_isdigit` had a logic bug, as highlighted in one
+of the comments.
+
+> As written, it should be `s_hasdigit`, but it's actually wrong - it should be:
+> ...
+> otherwise, it will choke on directories like `/proc/etc64/` or `/proc/net6/` if any such directory is added.
+> (Plus other bits like early return, but that's not a correctness bug.)
+
+A slightly adapted version of the code posted in that comment would look
+like the following, it also returns early as soon as it's clear that the
+check fails.
+
+```c
+/* check that string s is a contiguous array of integer characters */
+bool s_isinteger(const char* s) {
+    bool result = (*s != '\0');
+    while (*s != '\0') {
+        if ((*s < '0') || (*s > '9')) {
+            return false;
+        }
+        s++;
+    }
+    return result;
+}
+```
+
+
 
 ## Profiling
 
