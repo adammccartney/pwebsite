@@ -1,9 +1,15 @@
+
 (use-modules (haunt asset)
-             (haunt site)
-             (haunt builder assets)
              (haunt builder blog)
              (haunt builder atom)
-             (haunt reader commonmark))
+             (haunt builder assets)
+             (haunt builder flat-pages)
+             (haunt builder redirects)
+             (haunt post)
+             (haunt site)
+             (haunt reader commonmark)
+             (theme)
+             (utils))
 
 (site #:title "admu"
       #:domain "admccartney.mur.at"
@@ -11,9 +17,11 @@
       '((author . "Adam Mc Cartney")
         (email . "adam@mur.at"))
       #:readers (list commonmark-reader)
-      #:builders
-      (list (blog #:theme admccartney-theme)
-            (atom-feed #:max-entries 1024)
-            (atom-feeds-by-tag)
-            (static-directory "css")))
-  
+      #:builders (list (blog #:theme admccartney-theme)
+                       (atom-feed)
+                       (atom-feeds-by-tag)
+                       (static-directory "css")
+                       (static-directory "fonts")))
+
+
+

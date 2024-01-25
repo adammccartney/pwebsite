@@ -1,8 +1,0 @@
-<div class="partners">
-{{ i18n "taxo_partners" }}:
-<ul>
-{{ range .Params.partners -}}
-<li><a href="{{ "/partners/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
-{{ end -}}
-</ul>
-</div>
