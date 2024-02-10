@@ -3,7 +3,7 @@ body {
     color: #000;
     background-color: #fbfbfb;
     font-size: 24px;
-    font-family: 'Iosevka Web',serif;
+    font-family: 'Iosevka Web', sans-serif;
     line-height: 140%;
     text-rendering: optimizeLegibility;
 }
@@ -40,7 +40,7 @@ a:visited {
 }
 
 pre {
-    font-family: "IosevkaTerm Web",monospace;
+    font-family: "Iosevka Web",monospace;
     line-height: 110%;
     min-width: 100%;
     padding: 1rem;
@@ -51,11 +51,11 @@ pre {
 }
 
 pre code {
-    font-family: "Inconsolata",monospace;
+    font-family: "Iosevka Web",monospace;
 }
 
 p code, li code {
-    font-family: "Inconsolata",monospace;
+    font-family: "Iosevka Term Web",monospace;
     background-color: #eee;
 }
 
@@ -87,7 +87,7 @@ footer {
 /* Navigation */
 
 .nav {
-    font-family: 'Linux Biolinum',sans;
+    font-family: 'Iosevka Term Web';
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 3rem;

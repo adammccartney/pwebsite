@@ -20,8 +20,9 @@
       #:builders (list (blog #:theme admccartney-theme)
                        (atom-feed)
                        (atom-feeds-by-tag)
+                       (flat-pages "pages"
+                                   #:template (theme-layout admccartney-theme))
                        (static-directory "css")
                        (static-directory "fonts")))
-
 
 
