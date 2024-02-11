@@ -5,9 +5,10 @@
              (haunt builder assets)
              (haunt builder flat-pages)
              (haunt builder redirects)
+             (haunt reader commonmark)
              (haunt post)
              (haunt site)
-             (haunt reader commonmark)
+             (markdown)
              (theme)
              (utils))
 
