@@ -5,7 +5,6 @@
              (haunt builder assets)
              (haunt builder flat-pages)
              (haunt builder redirects)
-             (haunt reader commonmark)
              (haunt post)
              (haunt site)
              (markdown)
@@ -17,7 +16,7 @@
       #:default-metadata
       '((author . "Adam Mc Cartney")
         (email . "adam@mur.at"))
-      #:readers (list commonmark-reader)
+      #:readers (list commonmark-reader*)
       #:builders (list (blog #:theme admccartney-theme)
                        (atom-feed)
                        (atom-feeds-by-tag)
@@ -25,5 +24,3 @@
                                    #:template (theme-layout admccartney-theme))
                        (static-directory "css")
                        (static-directory "fonts")))
-
-

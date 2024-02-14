@@ -1,3 +1,4 @@
+;;; again, pilfered from David Thompson
 ;;; Copyright © 2018-2021 David Thompson <davet@gnu.org>
 ;;;
 ;;; This program is free software; you can redistribute it and/or

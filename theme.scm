@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;;; Copyright © 2024 Adam McCartney <adam@mur.at>
 ;;; Copyright © 2018-2021 David Thompson <davet@gnu.org>
 ;;;
@@ -16,8 +15,6 @@
 ;;; along with this program.  If not, see
 ;;; <http://www.gnu.org/licenses/>.
 
-
-=======
 (define-module (theme)
   #:use-module (haunt builder blog)
   #:use-module (haunt html)
