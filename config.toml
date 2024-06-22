@@ -59,7 +59,8 @@ metaDataFormat = "yaml"
    recording = "recordings"
    series = "series"
 
-[Author]
+
+[Params.Author]
   name = "Adam McCartney"
   website = "admccartney.mur.at"
   email = "adam@mur.at"
