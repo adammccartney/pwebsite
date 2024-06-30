@@ -1,5 +1,5 @@
 ---
-title: "not knowing the /proc filesystem"
+title: "Not knowing the /proc filesystem"
 date: 2023-10-22T15:12:10+02:00
 draft: false
 

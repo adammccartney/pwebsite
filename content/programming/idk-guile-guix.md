@@ -3,7 +3,7 @@ title: "Not knowing Guile or Guix"
 date: 2024-06-22T15:49:40+02:00
 draft: false
 
-tags: ["Guile", "Guix"]
+tags: ["Guile", "Guix", "Scheme", "Failure"]
 series: ["not knowing"]
 ---
 
@@ -67,23 +67,22 @@ start from there.
 
 ## guix
 
-Guix is a distribution of the GNU operating system. It\'s designed
-around the philosophy of \"the purely functional software deployment
-model\" that was described by Eelco Dolstra, the inventor of Nix, in his
-PhD thesis. It shares many fundamental ideas and patterns with NixOS -
-shells and containers that enable isolated environments, declaritive
-package management that makes it possible to manage dependencies and
-specify reproducible builds of software. Both distros have a package
-manager that can be installed in foreign distributions, and I\'ve had
-the chance to play around with both a bit over the past couple of years.
-One of the major differences is Nix\'s choice of a custom domain
-specific language (DSL). Guix on the other hand opts to use guile
-scheme. Scheme is generally considered to be an excellent language for
-writing DSLs, and one of the main lessons from Structure and
-Interpretation of Computer Programs is the idea of \"Metalinguistic
-Abstraction\". This is a fancy way to say inventing new languages to
-solve a problem. And the authors of that book contend this is one of the
-core skills of computer programming.
+Guix is a distribution of the GNU operating system. It\'s designed around the
+philosophy of [The Purely Functional Software Deployment
+Model](https://edolstra.github.io/pubs/phd-thesis.pdf). that was described by
+Eelco Dolstra, the inventor of [Nix](https://nixos.org/), in his PhD thesis. It
+shares many fundamental ideas and patterns with NixOS - shells and containers
+that enable isolated environments, declaritive package management that makes it
+possible to manage dependencies and specify reproducible builds of software.
+Both distros have a package manager that can be installed in foreign
+distributions, and I\'ve had the chance to play around with both a bit over the
+past couple of years. One of the major differences is Nix\'s choice of a custom
+domain specific language (DSL). Guix on the other hand opts to use guile scheme.
+Scheme is generally considered to be an excellent language for writing DSLs, and
+one of the main lessons from Structure and Interpretation of Computer Programs
+is the idea of \"Metalinguistic Abstraction\". This is a fancy way to say
+inventing new languages to solve a problem. And the authors of that book contend
+this is one of the core skills of computer programming.
 
 So, it\'s the prospect of hacking in a language that has more universal
 applicability that makes Guix the more interesting of the two projects
