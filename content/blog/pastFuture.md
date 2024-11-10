@@ -1,18 +1,11 @@
 ---
 title: "Past activities and future plans"
 date: 2020-12-22T16:37:00+01:00
-draft: true
+draft: false
 author: "Adam"
 
 partners: []
-tags: ["unix"]
-
-menu:
-  main:
-    parent: 2020
-    name: pastFuture
-    url: /music/2020/pastFuture.md
-
+tags: ["linux", "music"]
 
 ---
 
@@ -47,7 +40,7 @@ moving through the semester. I'll make a new home for it on here over the
 coming weeks and perhaps leave a source only version of the repo up on github,
 which also contains a few example patches in vcv.   
 
-# A little bit of unix hacking 
+# A little bit of linux hacking 
 
 Okay, so what I've been spending a whole lot of time doing over this past year
 is getting to grips with linux. I've been exploring the music notation language
@@ -56,7 +49,7 @@ if very useful for pulication quality music scores. In fact, a lot of the
 scores documented visually on this site in the Music/Scores section from about
 2017 onwards use Lilypond. They are currently being presented as jpegs of the
 finished score. A format that is quite useful for musicians, but possibly less
-useful for any aspiring music/unix hackers. I'm going to go back over these
+useful for any aspiring music/linux hackers. I'm going to go back over these
 pages and introduce some source code examples.
 
 Lilypond lets you express musical structures in plain text, which of course
